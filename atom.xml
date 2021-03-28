@@ -423,16 +423,15 @@
     <link href="http://kiligwyu.com/download-xcode-beta-by-aria2/"/>
     <id>http://kiligwyu.com/download-xcode-beta-by-aria2/</id>
     <published>2018-06-20T12:19:42.000Z</published>
-    <updated>2018-08-14T01:40:20.000Z</updated>
+    <updated>2021-03-28T03:21:38.722Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="08-14-更新"><a href="#08-14-更新" class="headerlink" title="08.14 更新"></a>08.14 更新</h2><p>之前找的 Cookie 有误，已更新，见第一张截图。</p><hr><h2 id="关于-Aria2-及其使用"><a href="#关于-Aria2-及其使用" class="headerlink" title="关于 Aria2 及其使用"></a>关于 Aria2 及其使用</h2><p>略。</p><h2 id="下载-Xcode-beta"><a href="#下载-Xcode-beta" class="headerlink" title="下载 Xcode-beta"></a>下载 Xcode-beta</h2><p>使用浏览器下载，由于网络波动，经常下载到一半就被断掉，而且还不能断点续传，Xcode 安装包现在都要 5 个多 G 了 😂 ，网络不好下载很蛋疼的 😂…</p><p>那么能不能用第三方下载工具下载呢，默认是不能的，比如 Xcode_10_Beta_2 的下载地址 <code>https://download.developer.apple.com/Developer_Tools/Xcode_10_Beta_2/Xcode_10_Beta_2.xip</code>，下载下来的只是个 index.html 的文件，浏览器在下载时应该是校验了登录信息的（Cookie）。下面介绍使用 Aria2 来下载 Xcode-beta 的方法。</p><p>首先打开 <a href="https://developer.apple.com/download/">苹果开发者下载网站</a> 并登录，打开开发者工具(⌘⌥I)，首先先点下下载按钮，稍后可以取消下载，如下图找到 Cookie，并复制。</p><p><img src="/image/download-xcode-beta-by-aria2/ss1.jpg" alt="ss1"></p><p>在 Aria2 中添加 Xcode-beta 的下载任务时，设置下 header，如这里我是使用 <a href="https://github.com/ziahamza/webui-aria2">Aria2WebUI</a> 这个 GUI 来下载，如下图，在 header 框中贴入复制的 Cookie，然后开始下载即可。</p><p><img src="/image/download-xcode-beta-by-aria2/ss2.png" alt="ss2"></p><p>可以愉快地下载了。</p><p><img src="/image/download-xcode-beta-by-aria2/ss3.PNG" alt="ss3"></p><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul><li><a href="https://www.v2ex.com/t/329787">[小技巧] 如何在命令行上下载 苹果开发者网站上的资源?</a></li><li><a href="https://blog.csdn.net/imanapple/article/details/50378618">拒绝 “Xcode-Ghost 门”，如何安全快速下载 Xcode？</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="08-14-更新"><a href="#08-14-更新" class="headerlink" title="08.14 更新"></a>08.14 更新</h2><p><del>之前找的 Cookie 有误，已更新，见第一张截图。</del></p><hr><h2 id="关于-Aria2-及其使用"><a href="#关于-Aria2-及其使用" class="headerlink" title="关于 Aria2 及其使用"></a>关于 Aria2 及其使用</h2><p>略。</p><h2 id="下载-Xcode-beta"><a href="#下载-Xcode-beta" class="headerlink" title="下载 Xcode-beta"></a>下载 Xcode-beta</h2><p>使用浏览器下载，由于网络波动，经常下载到一半就被断掉，而且还不能断点续传，Xcode 安装包现在都要 5 个多 G 了 😂 ，网络不好下载很蛋疼的 😂…</p><p>那么能不能用第三方下载工具下载呢，默认是不能的，比如 Xcode_10_Beta_2 的下载地址 <code>https://download.developer.apple.com/Developer_Tools/Xcode_10_Beta_2/Xcode_10_Beta_2.xip</code>，下载下来的只是个 index.html 的文件，浏览器在下载时应该是校验了登录信息的（Cookie）。下面介绍使用 Aria2 来下载 Xcode-beta 的方法。</p><p>首先打开 <a href="https://developer.apple.com/download/">苹果开发者下载网站</a> 并登录，打开开发者工具(⌘⌥I)，首先先点下下载按钮，稍后可以取消下载，<del>如下图找到 Cookie，并复制。</del> 把所有 Request Headers 都复制过去。</p><p><img src="/image/download-xcode-beta-by-aria2/ss1.jpg" alt="ss1"></p><p>在 Aria2 中添加 Xcode-beta 的下载任务时，设置下 header，如这里我是使用 <a href="https://github.com/ziahamza/webui-aria2">Aria2WebUI</a> 这个 GUI 来下载，如下图，在 header 框中贴入复制的 Cookie，然后开始下载即可。</p><p><img src="/image/download-xcode-beta-by-aria2/ss2.png" alt="ss2"></p><p>可以愉快地下载了。</p><p><img src="/image/download-xcode-beta-by-aria2/ss3.PNG" alt="ss3"></p><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul><li><a href="https://www.v2ex.com/t/329787">[小技巧] 如何在命令行上下载 苹果开发者网站上的资源?</a></li><li><a href="https://blog.csdn.net/imanapple/article/details/50378618">拒绝 “Xcode-Ghost 门”，如何安全快速下载 Xcode？</a></li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;08-14-更新&quot;&gt;&lt;a href=&quot;#08-14-更新&quot; class=&quot;headerlink&quot; title=&quot;08.14 更新&quot;&gt;&lt;/a&gt;08.14 更新&lt;/h2&gt;&lt;p&gt;之前找的 Cookie 有误，已更新，见第一张截图。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;关于</summary>
+    <summary type="html">&lt;h2 id=&quot;08-14-更新&quot;&gt;&lt;a href=&quot;#08-14-更新&quot; class=&quot;headerlink&quot; title=&quot;08.14 更新&quot;&gt;&lt;/a&gt;08.14 更新&lt;/h2&gt;&lt;p&gt;&lt;del&gt;之前找的 Cookie 有误，已更新，见第一张截图。&lt;/del&gt;&lt;/p&gt;
+&lt;hr&gt;</summary>
       
     
     
@@ -449,16 +448,17 @@
     <link href="http://kiligwyu.com/macOS-%E6%81%A2%E5%A4%8D%E5%87%BA%E5%8E%82%E8%AE%BE%E7%BD%AE/"/>
     <id>http://kiligwyu.com/macOS-%E6%81%A2%E5%A4%8D%E5%87%BA%E5%8E%82%E8%AE%BE%E7%BD%AE/</id>
     <published>2018-05-28T02:59:47.000Z</published>
-    <updated>2018-05-28T13:47:10.000Z</updated>
+    <updated>2021-03-28T03:32:52.056Z</updated>
     
-    <content type="html"><![CDATA[<p>最近由于个人原因要离职了，在公司用的 iMac 需要删除个人使用记录，恢复到出厂设置状态，两种办法。</p><p>一是重装系统抹掉磁盘。如何重装可查阅 Apple 技术支持网站。这种方式最耗时、最麻烦，但是可以不留一点儿使用痕迹。</p><p>第二种就是新建管理员账户，并登录，然后删除老账户，删除时选择 <code>Delete the home folder</code>。这种方式最快速，但是还有些残留，需要再删除老用户已安装的应用，删除 Keychin Access 中保存的密码证书等。</p><p>最后我选择了第二种。</p>]]></content>
+    <content type="html"><![CDATA[<ul><li><strong><a href="https://support.apple.com/zh-cn/HT201065">出售、赠送或折抵 Mac 前该怎么做</a></strong></li></ul><p><del>最近由于个人原因要离职了，在公司用的 iMac 需要删除个人使用记录，恢复到出厂设置状态，两种办法。</del></p><p><del>一是重装系统抹掉磁盘。如何重装可查阅 Apple 技术支持网站。这种方式最耗时、最麻烦，但是可以不留一点儿使用痕迹。</del></p><p><del>第二种就是新建管理员账户，并登录，然后删除老账户，删除时选择 <code>Delete the home folder</code>。这种方式最快速，但是还有些残留，需要再删除老用户已安装的应用，删除 Keychin Access 中保存的密码证书等。</del></p><p><del>最后我选择了第二种。</del></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;最近由于个人原因要离职了，在公司用的 iMac 需要删除个人使用记录，恢复到出厂设置状态，两种办法。&lt;/p&gt;
-&lt;p&gt;一是重装系统抹掉磁盘。如何重装可查阅 Apple 技术支持网站。这种方式最耗时、最麻烦，但是可以不留一点儿使用痕迹。&lt;/p&gt;
-&lt;p&gt;第二种就是新建管理员账户，</summary>
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://support.apple.com/zh-cn/HT201065&quot;&gt;出售、赠送或折抵 Mac 前该怎么做&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;del&gt;最近由于个人原因要离职了，在公司用的 iM</summary>
       
     
     
