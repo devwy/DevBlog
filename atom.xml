@@ -6,7 +6,7 @@
   <link href="http://kiligwyu.com/atom.xml" rel="self"/>
   
   <link href="http://kiligwyu.com/"/>
-  <updated>2021-03-25T09:17:15.711Z</updated>
+  <updated>2021-04-16T05:55:37.895Z</updated>
   <id>http://kiligwyu.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>macOS 文件同步</title>
+    <link href="http://kiligwyu.com/macos-rsync/"/>
+    <id>http://kiligwyu.com/macos-rsync/</id>
+    <published>2021-04-16T05:55:37.000Z</published>
+    <updated>2021-04-16T05:55:37.895Z</updated>
+    
+    <content type="html"><![CDATA[<p>为了数据安全，我们经常需要备份文件，需要保持源文件夹与备份文件夹同步，在 macOS 下我们可以使用系统自带的 CLI 工具 <code>rsync</code> 进行文件同步。</p><!--- more ---><h2 id="rsync"><a href="#rsync" class="headerlink" title="rsync"></a>rsync</h2><blockquote><p>rsync 是 Unix 下的一款 应用软件，它能同步更新两处计算机的档案与目录，並適当利用差分编码以减少数据传输量。rsync 中的一项同类软件不常见的重要特性是每个目標的镜像只需传送一次。rsync 可以拷贝／显示目录內容，以及拷贝档案，並可选压缩以及递归拷贝。—— 维基百科</p></blockquote><p>macOS 系统自带的 <code>rsync</code> 版本较老，version 2.6.9，2006 年发布的版本了，十几年未更新了，我们可以使用 <a href="https://brew.sh/">Homebrew</a> 更新到最新版本，version 3.2.3。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install rsync</span><br></pre></td></tr></table></figure><p>下面是我一个简单的备份博客的脚本。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">SOURCE_FOLDER=<span class="string">&quot;<span class="variable">$HOME</span>/Develop/Kilig/KiligWYu.com/&quot;</span></span><br><span class="line">DESTINATION_FOLDER=<span class="string">&quot;<span class="variable">$HOME</span>/OneDrive/Backups/Kilig/KiligWYu.com&quot;</span></span><br><span class="line">EXCLUDE_FOLDER_1=<span class="string">&quot;node_modules&quot;</span></span><br><span class="line">EXCLUDE_FOLDER_2=<span class="string">&quot;.deploy_git&quot;</span></span><br><span class="line"></span><br><span class="line">mkdir -p <span class="string">&quot;<span class="variable">$DESTINATION_FOLDER</span>&quot;</span></span><br><span class="line">rsync -avu --delete --exclude=<span class="string">&quot;<span class="variable">$EXCLUDE_FOLDER_1</span>&quot;</span> --exclude=<span class="string">&quot;<span class="variable">$EXCLUDE_FOLDER_2</span>&quot;</span> <span class="string">&quot;<span class="variable">$SOURCE_FOLDER</span>&quot;</span> <span class="string">&quot;<span class="variable">$DESTINATION_FOLDER</span>&quot;</span></span><br></pre></td></tr></table></figure><ul><li><code>-a</code> 等价于 <code>-rlptgoD</code>，保留所有文件系统属性</li><li><code>-v</code> 显示详细信息，显示同步的每一个文件，默认静默运行</li><li><code>-u</code> 仅复制修改时间较新的文件（如果时间相等，则复制大小不同的文件）</li><li><code>--delete</code> 删除目标文件夹中源文件中不存在的文件</li><li><code>--exclude=PATTERN</code> 忽略文件(夹)</li><li>另外需要注意的是源文件夹末尾的 <code>/</code>，带 <code>/</code> 表示拷贝源文件夹下的内容，不带 <code>/</code> 表示拷贝源文件夹</li></ul><p><code>rsync</code> 功能强大，可选参数非常多，<code>man rsync</code> 可查看其详细说明。</p><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul><li><a href="https://rsync.samba.org/">https://rsync.samba.org</a></li><li><a href="https://wydtl.com/2020/01/18/347/">rsync, 是时候思考一下文件路径末尾的 “/” 了</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;为了数据安全，我们经常需要备份文件，需要保持源文件夹与备份文件夹同步，在 macOS 下我们可以使用系统自带的 CLI 工具 &lt;code&gt;rsync&lt;/code&gt; 进行文件同步。&lt;/p&gt;
+&lt;!--- more ---&gt;
+
+&lt;h2 id=&quot;rsync&quot;&gt;&lt;a href=&quot;#r</summary>
+      
+    
+    
+    
+    
+    <category term="macOS" scheme="http://kiligwyu.com/tags/macOS/"/>
+    
+  </entry>
   
   <entry>
     <title>LayoutConstraints Unable to simultaneously satisfy constraints</title>
@@ -494,29 +519,6 @@
     <category term="iCollect" scheme="http://kiligwyu.com/tags/iCollect/"/>
     
     <category term="iColor" scheme="http://kiligwyu.com/tags/iColor/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>禁止终端的登录消息</title>
-    <link href="http://kiligwyu.com/disable-terminal-login-messages/"/>
-    <id>http://kiligwyu.com/disable-terminal-login-messages/</id>
-    <published>2018-05-12T05:47:36.000Z</published>
-    <updated>2018-05-12T06:00:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>在默认配置下，打开终端，login 命令会显示当前用户的最后一次登录消息。</p><p><img src="/image/disable-terminal-login-messages/last_login_message.png" alt="last_login_message"></p><p>要禁止这些消息，可以在主目录下创建一个 <code>.hushlogin</code> 的空文件，下次登录将静默登录。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ touch .hushlogin</span><br></pre></td></tr></table></figure><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul><li><a href="https://www.ibm.com/support/knowledgecenter/zh/ssw_aix_71/com.ibm.aix.osdevice/suppress_login_msgs.htm">禁止登录消息</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在默认配置下，打开终端，login 命令会显示当前用户的最后一次登录消息。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/image/disable-terminal-login-messages/last_login_message.png&quot; alt=&quot;last_login_mes</summary>
-      
-    
-    
-    
-    
-    <category term="Terminal" scheme="http://kiligwyu.com/tags/Terminal/"/>
     
   </entry>
   
