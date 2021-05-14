@@ -6,7 +6,7 @@
   <link href="http://kiligwyu.com/atom.xml" rel="self"/>
   
   <link href="http://kiligwyu.com/"/>
-  <updated>2021-04-16T05:55:37.895Z</updated>
+  <updated>2021-05-14T02:35:28.376Z</updated>
   <id>http://kiligwyu.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在 macOS Big Sur 上运行 Xcode 11</title>
+    <link href="http://kiligwyu.com/run-xcode-11-on-big-sur/"/>
+    <id>http://kiligwyu.com/run-xcode-11-on-big-sur/</id>
+    <published>2021-05-14T02:35:28.000Z</published>
+    <updated>2021-05-14T02:35:28.376Z</updated>
+    
+    <content type="html"><![CDATA[<p>从 iOS 14、Xcode 12 开始，Today Extension 被弃用，Xcode 12 不能再创建 Today Extension Target，需要在 Xcode 11 中创建，而在 macOS Big Sur 上已经打不开 Xcode 11 了，提示如下。</p><img src="https://raw.githubusercontent.com/KiligWYu/Pics/master/20210514101837.png" width="50%" height="50%"><!-- ![The version of Xcode installed on this Mac is not compatible with macOS Big Sur. Download the latest version for free from the App Store.](https://raw.githubusercontent.com/KiligWYu/Pics/master/20210514095838.png) --><p>不过还是有解决办法的，可以通过终端来打开 Xcode 11：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /Applications/Xcode_11.7.app/Contents/MacOS/Xcode</span><br></pre></td></tr></table></figure><!--- more ---><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul><li><a href="https://stackoverflow.com/questions/64505672/ios-how-to-add-today-extension-target-in-xcode-12-1">https://stackoverflow.com/questions/64505672/ios-how-to-add-today-extension-target-in-xcode-12-1</a></li><li><a href="https://stackoverflow.com/questions/64983664/is-it-possible-to-run-xcode11-in-macos-big-sur">https://stackoverflow.com/questions/64983664/is-it-possible-to-run-xcode11-in-macos-big-sur</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;从 iOS 14、Xcode 12 开始，Today Extension 被弃用，Xcode 12 不能再创建 Today Extension Target，需要在 Xcode 11 中创建，而在 macOS Big Sur 上已经打不开 Xcode 11 了，提示如下。&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="Xcode" scheme="http://kiligwyu.com/tags/Xcode/"/>
+    
+    <category term="Today Extension" scheme="http://kiligwyu.com/tags/Today-Extension/"/>
+    
+  </entry>
   
   <entry>
     <title>macOS 文件同步</title>
@@ -492,33 +516,6 @@
     <category term="macOS" scheme="http://kiligwyu.com/tags/macOS/"/>
     
     <category term="还原" scheme="http://kiligwyu.com/tags/%E8%BF%98%E5%8E%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iCollect V1.3 &amp; iColor V2.0</title>
-    <link href="http://kiligwyu.com/iCollect-V1-3-iColor-V2-0/"/>
-    <id>http://kiligwyu.com/iCollect-V1-3-iColor-V2-0/</id>
-    <published>2018-05-15T01:24:35.000Z</published>
-    <updated>2018-05-15T07:23:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>今早 iCollect Version 1.3 版本和 iColor Version 2.0 版本一起通过审核，上架 App Store。</p><h2 id="iCollect-V1-3"><a href="#iCollect-V1-3" class="headerlink" title="iCollect V1.3"></a>iCollect V1.3</h2><h3 id="更新内容"><a href="#更新内容" class="headerlink" title="更新内容"></a>更新内容</h3><ul><li>「花密」移动到了「更多功能」页面</li><li>「花密」的小组件增加了 Tapic Engine</li><li>「每日一文」的字体换成系统字体，减小 App 体积（之前的版本用的思源宋体）</li><li>网络变化的 banner 改为只在断网时显示</li><li>首次安装启动显示 Tips</li><li>增加了「关于开发者」</li><li>去掉了桌面图标的 3D Touch</li><li>其他的细节调整和 bug 修改</li></ul><p><img src="/image/iCollect_V1.3/Screenshot_1.PNG" style="zoom:30%" /><img src="/image/iCollect_V1.3/Screenshot_2.PNG" style="zoom:30%" /></p><p><img src="/image/iCollect_V1.3/Screenshot_3.PNG" style="zoom:30%" /><img src="/image/iCollect_V1.3/Screenshot_4.PNG" style="zoom:30%" /></p><h3 id="App-Store-下载"><a href="#App-Store-下载" class="headerlink" title="App Store 下载"></a>App Store 下载</h3><p><a href="https://itunes.apple.com/cn/app/icollect/id1333958571?l=cn&mt=8"><img src="/image/appstore.svg" alt="下载地址"></a></p><h2 id="iColor-V2-0"><a href="#iColor-V2-0" class="headerlink" title="iColor V2.0"></a>iColor V2.0</h2><h2 id="更新内容-1"><a href="#更新内容-1" class="headerlink" title="更新内容"></a>更新内容</h2><ul><li>全新 UI</li><li>去掉了导出为 JSON 文件功能</li><li>增加了「关于开发者」</li></ul><p><img src="/image/iColor_V2.0/Screenshot_1.PNG" style="zoom:30%" /><img src="/image/iColor_V2.0/Screenshot_2.PNG" style="zoom:30%" /></p><img src="/image/iColor_V2.0/Screenshot_3.PNG" style="zoom:30%" /><h3 id="App-Store-下载-1"><a href="#App-Store-下载-1" class="headerlink" title="App Store 下载"></a>App Store 下载</h3><p><a href="https://itunes.apple.com/cn/app/icolor/id1329896441?l=cn&mt=8"><img src="/image/appstore.svg" alt="下载地址"></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;今早 iCollect Version 1.3 版本和 iColor Version 2.0 版本一起通过审核，上架 App Store。&lt;/p&gt;
-&lt;h2 id=&quot;iCollect-V1-3&quot;&gt;&lt;a href=&quot;#iCollect-V1-3&quot; class=&quot;headerli</summary>
-      
-    
-    
-    
-    
-    <category term="App" scheme="http://kiligwyu.com/tags/App/"/>
-    
-    <category term="iCollect" scheme="http://kiligwyu.com/tags/iCollect/"/>
-    
-    <category term="iColor" scheme="http://kiligwyu.com/tags/iColor/"/>
     
   </entry>
   
